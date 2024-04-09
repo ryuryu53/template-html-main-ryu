@@ -1,0 +1,44 @@
+@use "global" as *;
+
+.section-header {
+  text-align: center;
+}
+
+.section-header__engtitle {
+  font-family: $second-font-family;
+  font-size: rem(32);
+  line-height: 1;
+  color: $green;
+  @include mq(md) {
+    font-size: rem(40);
+  }
+}
+
+.section-header__engtitle--white {
+  @include mq(md) {
+    color: $white;
+  }
+}
+
+.section-header__engtitle-accent {
+  color: $greenaccent;
+}
+
+.section-header__engtitle-accent--green2 {
+  @include mq(md) {
+    color: $green2;
+  }
+}
+
+.section-header__jatitle {
+  font-family: $base-font-family;
+  font-size: rem(12);
+  font-weight: $normal;
+  color: $greenaccent;
+}
+
+.section-header__jatitle--white {
+  @include mq(md) {
+    color: $white;
+  }
+}

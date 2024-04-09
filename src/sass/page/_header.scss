@@ -1,0 +1,40 @@
+@use "global" as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: rem(80);
+  background-color: rgba($color: $green, $alpha: 68%);
+  @include mq(md) {
+    height: rem(90);
+  }
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: inherit;
+  padding: 0 rem(15);
+  @include mq(md) {
+    padding: 0 rem(40);
+  }
+}
+
+.header__pc-nav {
+  display: none;
+  height: inherit;
+  @include mq(md) {
+    display: block;
+  }
+}
+
+.header__logo-img {
+  width: rem(102);
+  @include mq(md) {
+    width: rem(133);
+  }
+}

@@ -1,0 +1,43 @@
+@use "global" as *;
+
+.pc-nav__items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: inherit;
+}
+
+.pc-nav__item {
+  height: inherit;
+}
+
+.pc-nav__link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+  padding: 0 rem(20);
+}
+
+.pc-nav__item:first-child .pc-nav__link {
+  padding-left: 0;
+}
+
+.pc-nav__item:last-child .pc-nav__link {
+  padding-right: 0;
+}
+
+.pc-nav__link-engtext {
+  font-family: $second-font-family;
+  font-size: rem(18);
+  line-height: 1;
+  color: $white;
+}
+
+.pc-nav__link-jatext {
+  font-size: rem(10);
+  font-weight: $normal;
+  color: $white;
+  margin-top: rem(4);
+}

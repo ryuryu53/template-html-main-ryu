@@ -1,0 +1,27 @@
+@use "global" as *;
+
+.text {
+  font-family: $base-font-family;
+  font-size: rem(16);
+  font-weight: $normal;
+  color: $green;
+}
+
+.text--white-pc {
+  @include mq(md) {
+    color: $white;
+  }
+}
+
+.text--black-pc {
+  @include mq(md) {
+    color: $black;
+  }
+}
+
+.text--black-sp {
+  color: $black;
+  @include mq(md) {
+    color: $green;
+  }
+}
