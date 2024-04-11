@@ -24,6 +24,12 @@
   }
 }
 
+.header__drawer {
+  @include mq(md) {
+    display: none;
+  }
+}
+
 .header__pc-nav {
   display: none;
   height: inherit;

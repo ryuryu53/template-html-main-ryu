@@ -1,0 +1,65 @@
+@use "global" as *;
+
+.sp-nav {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: $greenaccent;
+}
+
+.sp-nav__content {
+  display: flex;
+  align-items: center;
+  // justify-content: center;
+  width: 100%;
+  max-width: rem(375);  // 文字列が左右にだらしなく広がらないようにした
+  height: inherit;
+  padding: 0 rem(15);
+  margin: auto;
+}
+
+.sp-nav__left-items,
+.sp-nav__right-items {
+  // display: flex;   これでは文字列の左端が揃わない
+  // flex-direction: column;
+  // align-items: center;
+  width: 50%;
+}
+
+.sp-nav__right-items {
+  
+}
+
+.sp-nav__left-link,
+.sp-nav__right-link {
+  position: relative;
+  display: block;
+  padding: rem(20) 0 rem(20) rem(22);
+}
+
+.sp-nav__left-link::before,
+.sp-nav__right-link::before {
+  content: "";
+  position: absolute;
+  top: rem(20);
+  left: 0;
+  width: rem(18);
+  height: rem(18);
+  background-image: url("../images/common/starfish.svg");
+  background-repeat: no-repeat;
+
+}
+
+.sp-nav__left-detail-items,
+.sp-nav__right-detail-items {
+  margin-top: rem(24);
+}
+
+.sp-nav__left-detail-item + .sp-nav__left-detail-item,
+.sp-nav__right-detail-item + .sp-nav__right-detail-item {
+  margin-top: rem(24);
+}
