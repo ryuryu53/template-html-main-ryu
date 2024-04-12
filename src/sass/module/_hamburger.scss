@@ -31,6 +31,7 @@
 
 .hamburger.is-active span:nth-child(1) {
   top: 60%;
+  right: rem(-4);   // 目視による微調整
   width: rem(40);
   transform: rotate(36.87deg);
 }
@@ -41,6 +42,7 @@
 
 .hamburger.is-active span:nth-child(3) {
   top: 60%;
+  right: rem(-4);   // 目視による微調整
   width: rem(40);
   transform: rotate(-36.87deg);
 }

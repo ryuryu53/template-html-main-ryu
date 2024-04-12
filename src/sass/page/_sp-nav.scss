@@ -30,14 +30,17 @@
   width: 50%;
 }
 
-.sp-nav__right-items {
-  
+.sp-nav__left-items {
+  padding-bottom: rem(5);   // 目視による微調整
 }
 
 .sp-nav__left-link,
 .sp-nav__right-link {
   position: relative;
   display: block;
+  font-size: rem(16);
+  color: $white;
+  line-height: 1.125;
   padding: rem(20) 0 rem(20) rem(22);
 }
 
@@ -51,7 +54,13 @@
   height: rem(18);
   background-image: url("../images/common/starfish.svg");
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
 
+.sp-nav__left-link span,
+.sp-nav__right-link span {
+  font-weight: $bold;
 }
 
 .sp-nav__left-detail-items,
@@ -62,4 +71,9 @@
 .sp-nav__left-detail-item + .sp-nav__left-detail-item,
 .sp-nav__right-detail-item + .sp-nav__right-detail-item {
   margin-top: rem(24);
+}
+
+.sp-nav__left-detail-item,
+.sp-nav__right-detail-item {
+  font-weight: $normal;
 }
