@@ -1,0 +1,70 @@
+@use "global" as *;
+
+.footer {
+  padding-top: rem(48);
+  padding-bottom: rem(56);
+  background-color: $greenaccent;
+  padding-top: rem(80);
+  padding-bottom: rem(80);
+}
+
+.footer__inner {
+  width: 100%;
+  max-width: rem(375);  // 文字列が左右にだらしなく広がらないようにした
+  padding: 0 rem(14);
+  margin: auto;
+  @include mq(md) {
+    max-width: rem(1130);
+    padding: 0 rem(25);
+  }
+}
+
+.footer__img {
+  @include mq(md) {   // 全体的に左へ寄せてgapを少し減らす感じか･･･
+    display: flex;
+    gap: rem(40);
+  }
+}
+
+.footer__logo {
+  width: rem(120);
+  @include mq(md) {
+    width: rem(200);
+  }
+}
+
+.footer__sns {
+  display: flex;
+  gap: rem(16);
+  margin-top: rem(16);
+  @include mq(md) {
+    align-items: flex-end;
+    padding-bottom: rem(5);   // 目視による微調整
+    margin-top: 0;
+  }
+}
+
+.footer__nav {
+  display: flex;
+  margin-top: rem(20);
+  @include mq(md) {
+    margin-top: rem(4);
+  }
+}
+
+.footer__copyright {
+  text-align: center;
+  margin-top: rem(20);
+  @include mq(md) {
+    margin-top: rem(60);
+  }
+}
+
+.footer__copyright small {
+  font-family: $second-font-family;
+  font-size: rem(12);
+  color: $white;
+  @include mq(md) {
+    font-size: rem(14);
+  }
+}
