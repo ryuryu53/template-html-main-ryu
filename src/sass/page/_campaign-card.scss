@@ -1,0 +1,104 @@
+@use "global" as *;
+
+.campaign-card {
+  box-shadow: rem(2) rem(2) rem(10) rgba($color: $black, $alpha: 25%);
+}
+
+.campaign-card__img {
+//   position: relative;
+  aspect-ratio: 280 / 188;
+  @include mq(md) {
+    aspect-ratio: 333 /223;
+  }
+}
+
+// .campaign-card__img::before {
+//   display: block;
+//   content: "";
+//   padding-top: 67.14%;
+// }
+
+.campaign-card__img img {
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // transform:translate(-50%, -50%);
+  // width: 100%;
+  height: 100%;
+  object-fit: cover;
+  // box-shadow: 0 rem(4) rem(4) rgba($color: $black, $alpha: 25%);  // SP版最初の画像だけドロップシャドウが効いている → 間違い？
+}
+
+.campaign-card__body {
+  padding: rem(16) rem(16) rem(24);
+  @include mq(md) {
+    padding: rem(24) rem(16) rem(40);
+  }
+}
+
+.campaign-card__category {
+  display: inline-block;
+  font-size: rem(12);
+  font-weight: 400;
+  padding: rem(4) rem(12);
+  color: $greenaccent;
+  border: rem(1) solid currentColor;
+}
+
+.campaign-card__title {
+  font-size: rem(16);
+  font-weight: $medium;
+  color: $green;
+  border-bottom: rem(1) solid $greenaccent;
+  margin-top: rem(4);
+  padding-bottom: rem(8);
+}
+
+.campaign-card__text {
+  font-size: rem(14);
+  font-weight: $normal;
+  color: $green;
+  text-align: center;
+  margin-top: rem(8);
+  @include mq(md) {
+    font-size: rem(16);
+    margin-top: rem(16);
+  }
+}
+
+.campaign-card__price {
+  font-family: $third-font-family;
+  text-align: center;
+  margin-top: rem(8);
+}
+
+.campaign-card__price-before {
+  position: relative;
+  font-size: rem(20);
+  font-weight: $bold;
+  color: $green;
+  @include mq(md) {
+    font-size: rem(24);
+  }
+}
+
+.campaign-card__price-before::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  content: "";
+  width: rem(76);
+  height: rem(3);
+  background-color: $red;
+}
+
+.campaign-card__price-after {
+  font-size: rem(32);
+  font-weight: $bold;
+  color: $greenaccent;
+  margin-left: rem(16);
+  @include mq(md) {
+    font-size: rem(40);
+    margin-left: rem(24);
+  }
+}

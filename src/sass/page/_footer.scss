@@ -19,7 +19,7 @@
   }
 }
 
-.footer__img {
+.footer__images {
   @include mq(md) {   // 全体的に左へ寄せてgapを少し減らす感じか･･･
     display: flex;
     gap: rem(40);

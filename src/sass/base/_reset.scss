@@ -1,3 +1,5 @@
+@use "global" as *;
+
 *,
 *::before,
 *::after {
@@ -36,6 +38,8 @@ body {
   min-height: 100vh;
   text-rendering: optimizeLegibility;
   line-height: 1.5;
+  position: relative;   // 追加（ページトップへ戻るボタンの固定に必要）
+  background-color: $white;   // 追加
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
@@ -117,4 +121,8 @@ a {
   text-decoration: none;
   color: inherit;
   transition: opacity 0.3s;
+}
+
+a:hover {
+  opacity: 0.7;   // 追加
 }

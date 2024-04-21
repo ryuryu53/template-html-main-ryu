@@ -27,7 +27,7 @@
     <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <!-- JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.6.0.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
     <script src="./assets/js/script.js" defer></script>
   </head>
@@ -138,16 +138,240 @@
         </nav>
       </div>
     </header>
+
     <main>
+      <!-- メインビュー -->
+      <section class="mv">
+        <div class="mv__inner">
+          <div class="swiper mv__slider js-mv-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide mv__img">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="./assets/images/common/mv-pc_1@2x.webp" type="image/webp" width="1440" height="768">
+                  <source srcset="./assets/images/common/mv_1@2x.webp" type="image/webp" widht="375" height="667">
+                  <img src="./assets/images/common/mv-pc_1@2x.jpg" alt="海水面のすぐ下で泳いでいる海亀" width="1440" height="768">
+                </picture>
+              </div>
+              <div class="swiper-slide mv__img">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="./assets/images/common/mv-pc_2@2x.webp" type="image/webp" width="1440" height="768">
+                  <source srcset="./assets/images/common/mv_2@2x.webp" type="image/webp" widht="375" height="667">
+                  <img src="./assets/images/common/mv-pc_2@2x.jpg" alt="海亀と2人のダイバーが海中で向き合っている様子" width="1440" height="768">
+                </picture>
+              </div>
+              <div class="swiper-slide mv__img">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="./assets/images/common/mv-pc_3@2x.webp" type="image/webp" width="1440" height="768">
+                  <source srcset="./assets/images/common/mv_3@2x.webp" type="image/webp" widht="375" height="667">
+                  <img src="./assets/images/common/mv-pc_3@2x.jpg" alt="晴れた日の海岸近くの海とそこに浮かぶ白い船" width="1440" height="768">
+                </picture>
+              </div>
+              <div class="swiper-slide mv__img">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="./assets/images/common/mv-pc_4@2x.webp" type="image/webp" width="1440" height="768">
+                  <source srcset="./assets/images/common/mv_4@2x.webp" type="image/webp" widht="375" height="667">
+                  <img src="./assets/images/common/mv-pc_4@2x.jpg" alt="人影もまばらな砂浜の前に広がるエメラルドグリーンの海" width="1440" height="768">
+                </picture>
+              </div>
+            </div>
+            <div class="mv__header">
+              <h2 class="mv__title">DIVING</h2>
+              <p class="mv__subtitle">into&nbsp;the&nbsp;ocean</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Campaign -->
+      <section id="campaign" class="top-campaign campaign">
+        <div class="campaign__inner inner">
+          <div class="campaign__title section-header">
+            <h2 class="section-header__engtitle">Campaign</h2>
+            <p class="section-header__jatitle">キャンペーン</p>
+          </div>
+          <div class="campaign__swiper-container">
+            <div class="swiper campaign__slider js-campaign-swiper">
+              <ul class="swiper-wrapper campaign__items">
+                <li class="swiper-slide campaign__item campaign-card">
+                  <a href="#" class="campaign-card__link">
+                    <div class="campaign-card__img">
+                      <picture>
+                        <source srcset="./assets/images/common/campaign_1.webp" type="image/webp">
+                        <img src="./assets/images/common/campaign_1.jpg" alt="いろいろな色の魚が海で泳いでいる様子">
+                      </picture>
+                    </div>
+                    <div class="campaign-card__body">
+                      <p class="campaign-card__category">ライセンス講習</p>
+                      <h3 class="campaign-card__title">ライセンス取得</h3>
+                      <p class="campaign-card__text">全部コミコミ(お一人様)</p>
+                      <div class="campaign-card__price">
+                        <span class="campaign-card__price-before">&yen;56&#44;000</span><span class="campaign-card__price-after">&yen;46&#44;000</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide campaign__item campaign-card">
+                  <a href="#" class="campaign-card__link">
+                    <div class="campaign-card__img">
+                      <picture>
+                        <source srcset="./assets/images/common/campaign_2.webp" type="image/webp">
+                        <img src="./assets/images/common/campaign_2.jpg" alt="いろいろな色の魚が海で泳いでいる様子">
+                      </picture>
+                    </div>
+                    <div class="campaign-card__body">
+                      <p class="campaign-card__category">ライセンス講習</p>
+                      <h3 class="campaign-card__title">ライセンス取得</h3>
+                      <p class="campaign-card__text">全部コミコミ(お一人様)</p>
+                      <div class="campaign-card__price">
+                        <span class="campaign-card__price-before">¥56,000</span><span class="campaign-card__price-after">¥46,000</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide campaign__item campaign-card">
+                  <a href="#" class="campaign-card__link">
+                    <div class="campaign-card__img">
+                      <picture>
+                        <source srcset="./assets/images/common/campaign_3.webp" type="image/webp">
+                        <img src="./assets/images/common/campaign_3.jpg" alt="いろいろな色の魚が海で泳いでいる様子">
+                      </picture>
+                    </div>
+                    <div class="campaign-card__body">
+                      <p class="campaign-card__category">ライセンス講習</p>
+                      <h3 class="campaign-card__title">ライセンス取得</h3>
+                      <p class="campaign-card__text">全部コミコミ(お一人様)</p>
+                      <div class="campaign-card__price">
+                        <span class="campaign-card__price-before">¥56,000</span><span class="campaign-card__price-after">¥46,000</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide campaign__item campaign-card">
+                  <a href="#" class="campaign-card__link">
+                    <div class="campaign-card__img">
+                      <picture>
+                        <source srcset="./assets/images/common/campaign_4.webp" type="image/webp">
+                        <img src="./assets/images/common/campaign_4.jpg" alt="いろいろな色の魚が海で泳いでいる様子">
+                      </picture>
+                    </div>
+                    <div class="campaign-card__body">
+                      <p class="campaign-card__category">ライセンス講習</p>
+                      <h3 class="campaign-card__title">ライセンス取得</h3>
+                      <p class="campaign-card__text">全部コミコミ(お一人様)</p>
+                      <div class="campaign-card__price">
+                        <span class="campaign-card__price-before">¥56,000</span><span class="campaign-card__price-after">¥46,000</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide campaign__item campaign-card">
+                  <a href="#" class="campaign-card__link">
+                    <div class="campaign-card__img">
+                      <picture>
+                        <source srcset="./assets/images/common/campaign_1.webp" type="image/webp">
+                        <img src="./assets/images/common/campaign_1.jpg" alt="いろいろな色の魚が海で泳いでいる様子">
+                      </picture>
+                    </div>
+                    <div class="campaign-card__body">
+                      <p class="campaign-card__category">ライセンス講習</p>
+                      <h3 class="campaign-card__title">ライセンス取得</h3>
+                      <p class="campaign-card__text">全部コミコミ(お一人様)</p>
+                      <div class="campaign-card__price">
+                        <span class="campaign-card__price-before">¥56,000</span><span class="campaign-card__price-after">¥46,000</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide campaign__item campaign-card">
+                  <a href="#" class="campaign-card__link">
+                    <div class="campaign-card__img">
+                      <picture>
+                        <source srcset="./assets/images/common/campaign_2.webp" type="image/webp">
+                        <img src="./assets/images/common/campaign_2.jpg" alt="いろいろな色の魚が海で泳いでいる様子">
+                      </picture>
+                    </div>
+                    <div class="campaign-card__body">
+                      <p class="campaign-card__category">ライセンス講習</p>
+                      <h3 class="campaign-card__title">ライセンス取得</h3>
+                      <p class="campaign-card__text">全部コミコミ(お一人様)</p>
+                      <div class="campaign-card__price">
+                        <span class="campaign-card__price-before">¥56,000</span><span class="campaign-card__price-after">¥46,000</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide campaign__item campaign-card">
+                  <a href="#" class="campaign-card__link">
+                    <div class="campaign-card__img">
+                      <picture>
+                        <source srcset="./assets/images/common/campaign_3.webp" type="image/webp">
+                        <img src="./assets/images/common/campaign_3.jpg" alt="いろいろな色の魚が海で泳いでいる様子">
+                      </picture>
+                    </div>
+                    <div class="campaign-card__body">
+                      <p class="campaign-card__category">ライセンス講習</p>
+                      <h3 class="campaign-card__title">ライセンス取得</h3>
+                      <p class="campaign-card__text">全部コミコミ(お一人様)</p>
+                      <div class="campaign-card__price">
+                        <span class="campaign-card__price-before">¥56,000</span><span class="campaign-card__price-after">¥46,000</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide campaign__item campaign-card">
+                  <a href="#" class="campaign-card__link">
+                    <div class="campaign-card__img">
+                      <picture>
+                        <source srcset="./assets/images/common/campaign_4.webp" type="image/webp">
+                        <img src="./assets/images/common/campaign_4.jpg" alt="いろいろな色の魚が海で泳いでいる様子">
+                      </picture>
+                    </div>
+                    <div class="campaign-card__body">
+                      <p class="campaign-card__category">ライセンス講習</p>
+                      <h3 class="campaign-card__title">ライセンス取得</h3>
+                      <p class="campaign-card__text">全部コミコミ(お一人様)</p>
+                      <div class="campaign-card__price">
+                        <span class="campaign-card__price-before">¥56,000</span><span class="campaign-card__price-after">¥46,000</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="campaign__swiper-btn">
+              <div class="swiper-button-next campaign__btn-next u-desktop"></div>
+              <div class="swiper-button-prev campaign__btn-prev u-desktop"></div>
+            </div>
+          </div>
+          <div class="campaign__btn">
+            <a class="button"><span class="button__text">View&nbsp;more</span></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="top-about about">
+
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="top-contact contact">
+
+      </section>
+
+      <!-- ページトップへ戻るボタン -->
+      <div class="to-top js-to-top">
+        <a href="#" class="to-top__link"></a>
+      </div>
       <!-- <div class="inner">
       <a class="button"><span class="button__text">View&nbsp;more</span></a>
     </div> -->
     </main>
 
     <!-- フッター -->
-    <footer class="footer">
+    <footer class="footer js-footer">
       <div class="footer__inner">
-        <div class="footer__img">
+        <div class="footer__images">
           <div class="footer__logo">
             <a href="#" class="footer__logo-link">
               <img src="./assets/images/common/footer-logo.svg" alt="CodeUps" class="footer__logo-img" width="200" height="75">

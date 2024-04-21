@@ -14,27 +14,32 @@
   }
 }
 
+.section-header__engtitle::first-letter {
+  color: $greenaccent;
+}
+
 .section-header__engtitle--white {
   @include mq(md) {
     color: $white;
   }
 }
 
-.section-header__engtitle-accent {
-  color: $greenaccent;
-}
-
-.section-header__engtitle-accent--green2 {
-  @include mq(md) {
-    color: $green2;
-  }
-}
+// 後で見たら見当たらなかった ↓ どこかにあるのか？
+// .section-header__engtitle-accent--green2 {
+//   @include mq(md) {
+//     color: $green2;
+//   }
+// }
 
 .section-header__jatitle {
   font-family: $base-font-family;
   font-size: rem(12);
   font-weight: $normal;
   color: $greenaccent;
+  margin-top: rem(4);
+  @include mq(md) {
+    margin-top: rem(8);
+  }
 }
 
 .section-header__jatitle--white {
