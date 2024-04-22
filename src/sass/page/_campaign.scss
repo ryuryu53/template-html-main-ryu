@@ -42,7 +42,7 @@
   }
 }
 
-.campaign__swiper-btn {
+// .campaign__swiper-btn {
   // position: absolute;
   // top: rem(-18);
   // left: 76.55%;   (1020-180+25)/1130
@@ -50,7 +50,7 @@
   // width: 100%;
   // max-width: rem(240);
   // height: rem(80);
-}
+// }
 
 .campaign__btn-next,
 .campaign__btn-prev {
@@ -69,7 +69,7 @@
 }
 
 .campaign__btn-prev {
-  left: 76.55%;
+  left: 76.55%;   // スワイパー側でleftに数値があり、rightはauto。rightで指定する場合、leftをautoにする必要あり
 }
 
 .campaign__btn-next:hover,
