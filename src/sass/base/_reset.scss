@@ -40,6 +40,7 @@ body {
   line-height: 1.5;
   position: relative;   // 追加（ページトップへ戻るボタンの固定に必要）
   background-color: $white;   // 追加
+  color: $green;  // 追加
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */

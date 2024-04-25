@@ -9,7 +9,6 @@
   font-size: rem(32);
   font-weight: $normal;   // weightが1種類しかなくても指定する必要あり
   line-height: 1;
-  color: $green;
   @include mq(md) {
     font-size: rem(40);
   }
@@ -19,9 +18,15 @@
   color: $greenaccent;
 }
 
-.section-header__engtitle--white {
+.section-header__engtitle--white-pc {
   @include mq(md) {
     color: $white;
+  }
+}
+
+.section-header__engtitle--white-pc::first-letter {
+  @include mq(md) {
+    color: $green2;
   }
 }
 
@@ -43,7 +48,7 @@
   }
 }
 
-.section-header__jatitle--white {
+.section-header__jatitle--white-pc {
   @include mq(md) {
     color: $white;
   }

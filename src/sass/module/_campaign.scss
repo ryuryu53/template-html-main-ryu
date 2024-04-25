@@ -108,6 +108,7 @@
 .campaign__btn {
   text-align: center;
   margin-top: rem(30);
+  padding-bottom: rem(5);
   @include mq(md) {
     margin-top: rem(70);
   }

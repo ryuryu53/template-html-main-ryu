@@ -51,13 +51,14 @@
 
 .button__text {
   position: relative;
+  padding-right: rem(48);   // 文字位置を調整するため指定
 }
 
 .button__text::after {
   content: "";
   position: absolute;
   top: 30%;
-  right: rem(-44);  // 48-(6/√2)
+  right: rem(0);  // 48-(6/√2) → 見た目で調整
   width: rem(40);
   height: rem(6);
   border-bottom: rem(1) solid $white;

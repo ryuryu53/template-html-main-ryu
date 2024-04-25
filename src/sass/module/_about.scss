@@ -105,6 +105,7 @@
 .about__btn {
   margin-top: rem(50);
   text-align: center;
+  padding-bottom: rem(5);
   @include mq(md) {
     margin-top: rem(40);
   }
