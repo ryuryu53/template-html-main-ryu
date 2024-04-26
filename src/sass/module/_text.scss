@@ -1,7 +1,6 @@
 @use "global" as *;
 
 .text {
-  font-family: $base-font-family;
   font-size: rem(16);
   font-weight: $normal;
 }
@@ -22,5 +21,16 @@
   color: $black;
   @include mq(md) {
     color: $green;
+  }
+}
+
+.text--bold {
+  font-weight: $bold;
+}
+
+.text--small-sp {
+  font-size: rem(14);
+  @include mq(md) {
+    font-size: rem(16);
   }
 }

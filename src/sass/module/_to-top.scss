@@ -13,11 +13,16 @@
   border-radius: 50%;
   overflow: hidden;
   border: rem(1) solid $greenaccent;
+  transition: opacity 0.3s;
   @include mq(md) {
     right: rem(20);
     bottom: rem(20);
     box-shadow: 0 4px 4px rgba($color: $black, $alpha: 25%);
   }
+}
+
+.to-top:hover {
+  opacity: 0.7;
 }
 
 .to-top__link {
@@ -34,6 +39,7 @@
   }
 }
 
+// 本番では画像を使う！
 .to-top__link::after {
   position: absolute;
   top: 24.5%;

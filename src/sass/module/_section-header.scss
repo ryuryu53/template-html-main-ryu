@@ -30,12 +30,9 @@
   }
 }
 
-// 後で見たら見当たらなかった ↓ どこかにあるのか？
-// .section-header__engtitle-accent--green2 {
-//   @include mq(md) {
-//     color: $green2;
-//   }
-// }
+.section-header__engtitle.section-header__engtitle--large {
+  font-size: rem(80);
+}
 
 .section-header__jatitle {
   font-family: $base-font-family;
@@ -51,5 +48,12 @@
 .section-header__jatitle--white-pc {
   @include mq(md) {
     color: $white;
+  }
+}
+
+.section-header__jatitle--up {
+  margin-top: 0;  // むしろマイナス位･･･
+  @include mq(md) {
+    margin-top: 0;  // むしろマイナス位･･･
   }
 }

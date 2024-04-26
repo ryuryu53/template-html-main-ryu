@@ -1,0 +1,50 @@
+@use "global" as *;
+
+.voice {
+  position: relative;
+}
+
+.voice::before {
+  @include mq(md) {
+    content: "";
+    background-image: url(../images/common/voice-goldfish.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    top: rem(-117);   // -117は目視で微調整
+    left: calc(50% - min(48%, rem(620)));   // 620は目視で微調整
+    width: rem(301);
+    height: rem(138);
+  }
+}
+
+.voice::after {
+  @include mq(md) {
+    content: "";
+      background-image: url(../images/common/voice-seahorse.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      position: absolute;
+      right: calc(50% - min(48%, 37.3rem));   // 37.3は目視で微調整
+      bottom: rem(-86);   // -86は目視で微調整
+      width: rem(194);
+      height: rem(181);
+    }
+}
+
+.voice__items {
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(30);
+  }
+}
+
+.voice__btn {
+  text-align: center;
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}

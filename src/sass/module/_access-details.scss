@@ -1,0 +1,12 @@
+@use "global" as *;
+
+.access-details {
+  text-align: center;
+  @include mq(md) {
+    text-align: left;
+  }
+}
+
+.access-details__item {
+  margin-top: rem(4);
+}

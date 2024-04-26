@@ -6,16 +6,16 @@
 
 .about::after {
   @include mq(md) {
-  content: "";
-    background-image: url(../images/common/about-coral.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    content: "";
     position: absolute;
     right: calc(50% - min(48%, 39.875rem));
     bottom: rem(-90);
     width: rem(194);
     height: rem(181);
+    background-image: url(../images/common/about-coral.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
   }
 }
 

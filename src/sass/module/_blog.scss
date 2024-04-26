@@ -13,7 +13,7 @@
     background-size: contain;
     position: absolute;
     top: rem(24);
-    left: calc(50% - min(48%, rem(600)));
+    left: calc(50% - min(48%, rem(620)));   // 620は目視で微調整
     width: rem(437);
     height: rem(201);
   }
