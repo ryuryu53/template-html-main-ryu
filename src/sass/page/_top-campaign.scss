@@ -3,6 +3,6 @@
 .top-campaign {
   margin-top: rem(40);
   @include mq(md) {
-    margin-top: rem(164);
+    margin-top: rem(120);   // 164 → 120：新たに複製したカンプは120･･･Swiperのカードをいろいろいじっているうちに位置がずれたものを上書きしてしまったのか？
   }
 }
