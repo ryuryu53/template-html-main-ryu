@@ -30,12 +30,14 @@
   }
 }
 
-.section-header__engtitle.section-header__engtitle--large {
+.section-header__engtitle--large {
   font-size: rem(80);
+  @include mq(md) {
+    font-size: rem(80);   // SPとサイズ同じだが、mq使わないと40を覆せない
+  }
 }
 
 .section-header__jatitle {
-  font-family: $base-font-family;
   font-size: rem(12);
   font-weight: $normal;
   color: $greenaccent;
