@@ -2,7 +2,7 @@
 
 .button {
   display: inline-block;
-  width: rem(206);
+  width: rem(202);
   padding: rem(16);
   background-color: $greenaccent;
   border: rem(1) solid transparent;
@@ -13,6 +13,18 @@
   position: relative;
   z-index: 1;
   cursor: pointer;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: rem(4);
+  left: rem(4);
+  width: rem(202);
+  height: calc(rem(1) * 2 + rem(16) * 2 + rem(14) * 1.5);
+  background-color: transparent;
+  border: rem(1) solid $greenaccent;
+  z-index: -1;
 }
 
 .button::after {
@@ -26,18 +38,6 @@
   transform: scale(0, 1);
   transform-origin: left top;
   transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
-  z-index: -1;
-}
-
-.button::before {
-  content: "";
-  position: absolute;
-  top: rem(4);
-  left: rem(4);
-  width: rem(206);
-  height: calc(rem(1) * 2 + rem(16) * 2 + rem(14) * 1.5);
-  background-color: transparent;
-  border: rem(1) solid $greenaccent;
   z-index: -1;
 }
 
