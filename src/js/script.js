@@ -134,7 +134,7 @@ jQuery(function ($) {
 
   // ローディングアニメーション
   function runLoadingAnimation() {
-    const $loading = $(".js-loading");
+    const $loading = $(".js-loading-white");
     const $images = $(".js-loading-images");
     const $imgLeft = $(".js-loading-img-left");
     const $imgRight = $(".js-loading-img-right");
@@ -146,20 +146,23 @@ jQuery(function ($) {
     // ローディングアニメーション開始時にスクロール禁止の処理を実行
     $("html, body").css("overflow", "hidden");
     // ローディングアニメーションの処理を実行
-    $loading.delay(1000).queue(function (next) {
-      $title.delay(1000).fadeIn(function () {
-        $images.delay(2000).addClass("appear");
-        $imgLeft.delay(2000).addClass("loaded");
-        $imgRight.delay(2000).addClass("loaded");
+    $loading.delay(1000).queue(function (next) {  // 1秒待機
+      $title.fadeIn(1000, function () { // フェードイン（1秒） → 「50);」の下にあるnext(); を呼ぶ
+        $images.delay(1000).queue(function(next) {  // 1秒待機して$images.queue(...) を登録
+          $(this).addClass("appear"); // `.loading__images` に `appear` クラスを追加
+          setTimeout(() => {
+            $imgLeft.addClass("loaded"); // `.loading__img-left` に `loaded` クラスを追加
+            $imgRight.addClass("loaded"); // `.loading__img-right` に `loaded` クラスを追加
+            next(); // `$images.queue()` のキューを進める（setTimeout 完了後に呼ぶ）
+          }, 50); // 50ミリ秒遅らせる 👉 初期状態（transform: translateY(100%)）をブラウザに認識させてアニメーションが動くようにする 👉 transitionend イベントが発火！
+        });
+        next(); // next(); を呼んで $loading.queue() の次の処理へ進める
       });
-      next();
     });
 
     $(document).on("transitionend", ".js-loading-img-right", function () {
-      // $imgLeft.delay(2000).fadeOut();
-      // $imgRight.delay(2000).fadeOut();
       $loading.addClass("fadeout");
-      $images.delay(1000).fadeOut();
+      $images.delay(1000).fadeOut(1000);
     });
 
     // ローディングアニメーション終了時にスクロール許可の処理を実行

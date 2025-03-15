@@ -34,8 +34,8 @@
   font-family: $third-font-family;
   font-size: rem(40);
   font-weight: $normal;
-  letter-spacing: 0.54em;
   color: $white;
+  letter-spacing: 0.54em;
   text-align: center;
   @include mq(md) {
     font-size: rem(80);
