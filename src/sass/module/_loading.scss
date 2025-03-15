@@ -1,0 +1,113 @@
+@use "global" as *;
+
+.loading {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: $white;
+  z-index: 9999;
+  text-align: center;
+}
+
+.loading.fadeout {
+  display: none;
+}
+
+.loading__header {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  @include mq(md) {
+    top: 41.276%;
+    transform: translateX(-50%);
+  }
+}
+
+.loading__title {
+  font-family: $third-font-family;
+  font-size: rem(40);
+  font-weight: $normal;
+  line-height: 1.3;
+  color: $white;
+  letter-spacing: 0.53em;
+  text-indent: 0.5em;
+  text-transform: uppercase;
+
+  @include mq(md) {
+    font-size: rem(80);
+    text-indent: 0.48em;
+  }
+}
+
+.loading__subtitle {
+  font-family: $second-font-family;
+  font-size: rem(20);
+  font-weight: $normal;
+  color: $white;
+  position: relative;
+  right: rem(1);
+
+  @include mq(md) {
+    right: rem(2);
+  }
+}
+
+/* 初期状態ではスクロールが有効 */
+body {
+  overflow: auto;
+  position: relative;
+}
+
+/*========= 画面遷移のためのCSS ===============*/
+/* 画面遷移アニメーション */
+.loading__images {
+  display: none;
+  position: fixed;
+  z-index: 99999;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+/* .loading__imagesにappearクラスがついたら出現 */
+.loading__images.appear {
+  display: block;
+}
+
+.loading__img-left, .loading__img-right {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background-image: url('../images/common/mv_1@2x.webp');
+  background-repeat: no-repeat;
+  background-size: 200% 100%; /* 横幅を2倍にして、左右で分割 */
+  background-position: center;
+  transition: transform 2s ease; // 2秒かけてtransformをアニメーション
+  @include mq(md) {
+  background-image: url('../images/common/mv-pc_1@2x.webp');
+  }
+}
+
+.loading__img-left {
+  top: 0;
+  left: 0;
+  background-position: left center; /* 画像の左半分を表示 */
+  transform: translateY(100%); /* 初期位置を画面外下部に */
+}
+
+.loading__img-right {
+  top: 0;
+  right: 0;
+  background-position: right center; /* 画像の右半分を表示 */
+  transform: translateY(calc(100% + 80px));
+}
+
+.loading__img-left.loaded, .loading__img-right.loaded {
+  transform: translateY(0); // アニメーションで上にスライドする
+}

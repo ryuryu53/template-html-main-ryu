@@ -131,4 +131,42 @@ jQuery(function ($) {
       });
     }
   });
+
+  // ローディングアニメーション
+  function runLoadingAnimation() {
+    const $loading = $(".js-loading");
+    const $images = $(".js-loading-images");
+    const $imgLeft = $(".js-loading-img-left");
+    const $imgRight = $(".js-loading-img-right");
+    const $title = $(".js-loading-title");
+    // トップページでのみアニメーションを実行
+    if ($loading.length === 0) {
+      return;
+    }
+    // ローディングアニメーション開始時にスクロール禁止の処理を実行
+    $("html, body").css("overflow", "hidden");
+    // ローディングアニメーションの処理を実行
+    $loading.delay(1000).queue(function (next) {
+      $title.delay(1000).fadeIn(function () {
+        $images.delay(2000).addClass("appear");
+        $imgLeft.delay(2000).addClass("loaded");
+        $imgRight.delay(2000).addClass("loaded");
+      });
+      next();
+    });
+
+    $(document).on("transitionend", ".js-loading-img-right", function () {
+      // $imgLeft.delay(2000).fadeOut();
+      // $imgRight.delay(2000).fadeOut();
+      $loading.addClass("fadeout");
+      $images.delay(1000).fadeOut();
+    });
+
+    // ローディングアニメーション終了時にスクロール許可の処理を実行
+    setTimeout(function () {
+      $("html, body").css("overflow", "auto");
+    }, 6000);
+  }
+
+  runLoadingAnimation();
 });
